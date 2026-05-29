@@ -1,0 +1,53 @@
+What is useState?
+`useState` is a React Hook used to manage state inside functional components.
+
+Before Hooks, state management was mainly done in class components using `this.state`.
+React introduced Hooks so we can use state and lifecycle features inside functional components as well.
+
+The main purpose of `useState` is to store and update dynamic data in a component.
+-----------------------------------------
+
+* `useState` is used for state management in functional components.
+* State means data that can change over time.
+* React updates only the changed component instead of reloading the complete page.
+* This improves performance and provides a better user experience.
+* `useState` returns an array with two values:
+
+  1. Current state value
+  2. Function used to update the state
+* We can give an initial value inside `useState`.
+* Whenever the state changes, React re-renders the component.
+* Re-render means React updates the UI with new data.
+* State updates are immutable, meaning we should update state using the setter function.
+---------------------------------------- 
+Simple Syntax Explanation:
+
+Syntax:
+
+const [state, setState] = useState(initialValue);
+
+Explanation:
+
+* `state` → current value
+* `setState` → function used to update value
+* `initialValue` → default value of state
+
+Example:
+
+const [name, setName] = useState("Ajay");
+
+Here:
+
+* `name` contains current value
+* `setName()` updates the value
+* `"aaruu"` is the default initial value
+---------------------------------------------
+Interview Explanation for Input Example
+
+You can speak like this in interview:
+
+“In this example, I used the useState Hook to manage the input field value dynamically.
+Initially, the state value is set to ‘Ajay’.
+Whenever the user types inside the input field, the onChange event triggers and updates the state using the setter function.
+React then re-renders only that component with the updated value instead of refreshing the complete page.
+This improves performance and user experience.”
